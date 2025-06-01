@@ -780,6 +780,7 @@ impl MetadataCommand {
         cmd.args(&self.other_options);
 
         cmd.envs(&self.env);
+        cmd.env_remove("CARGO_ENCODED_RUSTFLAGS");
 
         cmd
     }
